@@ -14,14 +14,18 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true,
-    "plugins": [
-      {
-        "name": "next"
-      }
-    ],
+    "plugins": [{ "name": "next" }],
     "baseUrl": ".",
     "paths": {
-      "@/*": ["./src/*"]
+      "App/Asset->*": ["src/assets/*"],
+      "App/Component::*": ["src/components/*"],
+      "App/Config::*": ["src/configs/*"],
+      "App/Context::*": ["src/contexts/*"],
+      "App/Data->*": ["src/data/*"],
+      "App/Hook::*": ["src/hooks/*"],
+      "App/Service::*": ["src/services/*"],
+      "App/Store::*": ["src/stores/*"],
+      "App/Util::*": ["src/utils/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],

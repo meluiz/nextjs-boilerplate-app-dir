@@ -1,0 +1,51 @@
+{
+  "extends": "next/core-web-vitals",
+  "plugins": [
+    "react",
+    "prettier",
+    "unused-imports",
+    "eslint-plugin-import-helpers"
+  ],
+  "rules": {
+    "indent": "off",
+    "camelcase": "off",
+    "space-before-function-parent": "off",
+    "no-useless-escape": "off",
+    "react/prop-types": "off",
+    "react/display-name": "off",
+    "react/no-children-prop": "off",
+    "react/react-in-jsx-scope": "off",
+    "react/jsx-filename-extension": [1, { "extensions": [".tsx"] }],
+    "prettier/prettier": ["error", { "endOfLine": "auto" }],
+    "import/no-anonymous-default-export": "off",
+    "import/no-unresolved": "warn",
+    "unused-imports/no-unused-imports": "warn",
+    "unused-imports/no-unused-vars": [
+      "warn",
+      {
+        "vars": "all",
+        "args": "after-used",
+        "varsIgnorePattern": "^_",
+        "argsIgnorePattern": "^_"
+      }
+    ],
+    "import-helpers/order-imports": [
+      "warn",
+      {
+        "newlinesBetween": "always",
+        "alphabetize": { "order": "asc", "ignoreCase": true },
+        "groups": [
+          ["type"],
+          ["/^react/", "/^next/", "/^@next/"],
+          ["/^App/Util/", "/^App/Service/"],
+          ["/^App/Hook/", "/^App/Store/"],
+          ["/^App/Config/"],
+          ["/^App/Component/"],
+          ["module"],
+          ["/^App/Asset/", "absolute"],
+          ["parent", "sibling", "index"]
+        ]
+      }
+    ]
+  }
+}
