@@ -1,10 +1,16 @@
 {
-  "extends": "next/core-web-vitals",
+  "extends": [
+    "next/core-web-vitals",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:prettier/recommended",
+    "plugin:@typescript-eslint/recommended"
+  ],
   "plugins": [
     "react",
     "prettier",
     "unused-imports",
-    "eslint-plugin-import-helpers"
+    "eslint-plugin-import-helpers",
+    "@typescript-eslint"
   ],
   "rules": {
     "indent": "off",
@@ -17,6 +23,12 @@
     "react/react-in-jsx-scope": "off",
     "react/jsx-filename-extension": [1, { "extensions": [".tsx"] }],
     "prettier/prettier": ["error", { "endOfLine": "auto" }],
+    "@typescript-eslint/ban-ts-comment": "off",
+    "@typescript-eslint/no-var-requires": "off",
+    "@typescript-eslint/no-non-null-assertion": "off",
+    "@typescript-eslint/no-use-before-define": ["off"],
+    "@typescript-eslint/no-unused-vars": "off",
+    "@typescript-eslint/no-explicit-any": "off",
     "import/no-anonymous-default-export": "off",
     "import/no-unresolved": "warn",
     "unused-imports/no-unused-imports": "warn",
